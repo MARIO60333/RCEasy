@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto+Condensed');
+@import "scroll.css";
+
+/* font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+/*////////////////////////////////*/
+/*////Страница////////////////////*/
+/*////////////////////////////////*/
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  z-index: 999;
+  border: solid rgb(28, 28, 28) 3px;
+  overflow: hidden;
+}
+
+body {
+  background: rgba(48, 48, 48, 1);
+}
+
+/*////////////////////////////////*/
+/*////Тулбар//////////////////////*/
+/*////////////////////////////////*/
+
+.toolbar {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 25px;
+  background: rgb(28, 28, 28);
+  color: rgb(180, 180, 180);
+  -webkit-app-region: drag;
+  top: 0; right: 0; bottom: 0; left: 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.toolbar .left, .toolbar .right span {
+  -webkit-app-region: no-drag;
+}
+
+/*////настройки тулбара///////////*/
+
+.left {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: auto;
+  height: 22px;
+  margin: auto 0;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.right {
+  z-index: inherit;
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 60px;
+  height: 25px;
+  margin: auto 0;
+  font-weight: 600;
+}
+
+/*////Правый тулбар///////////////*/
+
+.close {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  right: 0;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.close img {
+  z-index: -1;
+  position: absolute;
+  width: 20px;
+  margin: auto auto;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*////Рабочее пространство////////*/
+
+.workspace {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: auto;
+  height: auto;
+  margin-top: 25px;
+  padding: 30px;
+  border-width: 0px 3px 3px 3px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  overflow: auto;
+  color: rgb(223, 223, 223);
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background: rgb(32, 32, 32);
+  border-radius: 10px;
+  grid-template-columns: 100%;
+  grid-template-rows: 42px auto;
+  grid-template-areas: "bhe1 ."
+                       ". .";
+}
+
+.body h1 {
+  grid-area: bhe1;
+  margin-left: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type="text"] {
+  border-width: 0px;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-radius: 7.5px;
+  border-style: solid;
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+  padding: 0 10px;
+  outline: 0;
+}
+
+input[type="text"]:focus {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-radius: 7.5px;
+  border-style: solid;
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+  padding: 0 10px;
+  outline: 0;
+}
+
+a:-webkit-any-link {
+    color: rgb(104, 193, 184);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:active {
+  font-style: normal;
+  color: rgb(25, 102, 96);
+}

@@ -1,0 +1,34 @@
+.body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background: rgb(32, 32, 32);
+  border-radius: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 42px auto;
+  grid-template-areas: "bhe1 ."
+                       "b-left b-right";
+}
+
+.body h1 {
+  grid-area: bhe1;
+  margin-left: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.b-left, .b-right {
+  width: 99%;
+  height: 100%;
+  overflow: auto;
+}
+
+.b-left {
+  grid-area: b-left;
+  border-radius: 0 0 0 10px;
+}
+
+.b-right {
+  grid-area: b-right;
+  justify-self: end;
+  border-radius: 0 0 10px 0;
+}
